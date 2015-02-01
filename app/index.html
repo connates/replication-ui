@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+
+<html ng-app="storageApp">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <title>Replication Management</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="bower_components/html5-boilerplate/css/normalize.css">
+    <link rel="stylesheet" href="bower_components/html5-boilerplate/css/main.css">
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="app.css">
+    <script src="bower_components/html5-boilerplate/js/vendor/modernizr-2.6.2.min.js"></script>
+</head>
+
+<body>
+ <div class="container">
+     <div class="page-header">
+    <h3 class="text-muted">Replication Management</h3>
+     </div>
+     <div class="jumbotron">
+         
+    <div class="header" ng-app="mainNavList">
+        <ul class="nav nav-pills nav-stacked" style="max-width: 150px;" ng-controller="mainNavCtrl">
+            <li ng-class="navClass('data-replication')"><a href="#/data-replication">Data Replication</a>
+            </li>
+            <li ng-class="navClass('data-migration')"><a href="#/data-migration">Data Migration</a>
+            </li>
+        </ul>
+        <div ng-view="" style="padding-left: 155px;"></div>
+    </div>
+     </div>    
+</div>
+    
+
+
+    <!-- In production use:
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
+  -->
+    <!-- Jquery -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+
+    <!-- AngularJS Modules -->
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.js"></script>
+
+    <script src='bower_components/angular-upload/angular-upload.min.js'></script>
+
+    <!-- shim is needed to support non-HTML5 FormData browsers (IE8-9)-->
+
+    <!-- Bootstrap -->
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+
+
+    <!-- Application level dependencies-->
+    <script src="app.js"></script>
+    <script src="main-nav-list.js"></script>
+    <script src="uploads/upload-file.js"></script>
+    <script src="view-files/view-files.js"></script>
+    <script src="login/login.controller.js"></script>
+
+
+
+</body>
+
+</html>
