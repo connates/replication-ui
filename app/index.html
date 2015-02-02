@@ -5,7 +5,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    
+
     <title>Replication Management</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -17,24 +17,30 @@
 </head>
 
 <body>
- <div class="container">
-     <div class="page-header">
-    <h3 class="text-muted">Replication Management</h3>
-     </div>
-     <div class="jumbotron">
-         
-    <div class="header" ng-app="mainNavList">
-        <ul class="nav nav-pills nav-stacked" style="max-width: 150px;" ng-controller="mainNavCtrl">
-            <li ng-class="navClass('data-replication')"><a href="#/data-replication">Data Replication</a>
-            </li>
-            <li ng-class="navClass('data-migration')"><a href="#/data-migration">Data Migration</a>
-            </li>
-        </ul>
-        <div ng-view="" style="padding-left: 155px;"></div>
+    <div class="container">
+        <div class="page-header">
+            <h3 class="text-muted">Replication Management</h3>
+        </div>
+        <div class="jumbotron">
+
+            <div class="header" ng-app="mainNavList">
+                <ul class="nav nav-pills nav-stacked" style="max-width: 150px;" ng-controller="mainNavCtrl">
+                    <li ng-class="navClass('data-replication')"><a href="#/data-replication">Data Replication</a>
+                    </li>
+                    <li ng-class="navClass('data-migration')"><a href="#/data-migration">Data Migration</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="row">
+                <div class="span12">
+                    <div class="well" ui-view></div>
+                </div>
+            </div>
+        </div>
+
     </div>
-     </div>    
-</div>
-    
+
+
 
 
     <!-- In production use:
@@ -50,6 +56,7 @@
     <script src="bower_components/angular-resource/angular-resource.js"></script>
 
     <script src='bower_components/angular-upload/angular-upload.min.js'></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
 
     <!-- shim is needed to support non-HTML5 FormData browsers (IE8-9)-->
 
@@ -60,8 +67,10 @@
     <!-- Application level dependencies-->
     <script src="app.js"></script>
     <script src="main-nav-list.js"></script>
-    <script src="uploads/upload-file.js"></script>
-    <script src="view-files/view-files.js"></script>
+
+    <script src="data-replication/data-replication.js"></script>
+    <script src="data-replication/data-replication.running.js"></script>
+    <script src="data-replication/data-replication.running.service.js"></script>
     <script src="login/login.controller.js"></script>
 
 

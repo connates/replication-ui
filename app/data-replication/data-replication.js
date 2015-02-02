@@ -1,11 +1,5 @@
 'use strict';
+// diskService to acess the API
+angular.module('storageApp').controller('DataReplicationCtrl', ['$http', function ($http) {
 
-/**
- *
- */
-
-
-// Define our main app
-var app = angular.module('storageApp');
-
-var host = "http://localhost:3000";
+}]);
