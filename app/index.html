@@ -21,19 +21,23 @@
         <div class="page-header">
             <h3 class="text-muted">Replication Management</h3>
         </div>
-        <div class="jumbotron">
 
-            <div class="header" ng-app="mainNavList">
+        <div class="row">
+
+            <div class="col-sm-2 pa-sidebar well" ng-app="mainNavList">
+
                 <ul class="nav nav-pills nav-stacked" style="max-width: 150px;" ng-controller="mainNavCtrl">
                     <li ng-class="navClass('data-replication')"><a href="#/data-replication">Data Replication</a>
                     </li>
                     <li ng-class="navClass('data-migration')"><a href="#/data-migration">Data Migration</a>
                     </li>
                 </ul>
+
             </div>
-            <div class="row">
-                <div class="span12">
-                    <div class="well" ui-view></div>
+            </hr>
+            <div class="col-sm-10 ">
+                <div class="tab-content">
+                    <div ui-view ></div>
                 </div>
             </div>
         </div>

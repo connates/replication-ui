@@ -16,13 +16,20 @@
 
 <table class="table table-striped table-bordered">
 	<thead>
-		<th>Disk Id&nbsp;</th>
-		<th>Disk Name&nbsp;</th>
+        <th>Id&nbsp;</th>
+		<th>Name&nbsp;</th>
+		<th>Status&nbsp;</th>
+        <th>Next Iteration&nbsp;</th>
+		<th>Last Run&nbsp;</th>
+        
 	</thead>
 	<tbody>
-		<tr dir-paginate="disk in disks  | filter:searchText | itemsPerPage: pageSize: 'disks'" >{{disk|json}}
-			<td>{{disk.diskId}}</td>
-			<td>{{disk.diskName}}</td>
+		<tr ng-repeat='disk in disks' >{{disk|json}}
+			<td>{{disk.pid}}</td>
+			<td>{{disk.name}}</td>
+            <td>{{disk.snap_name}}</td>
+			<td>{{disk.bitmap_size}}</td>
+            <td>{{disk.state}}</td>
 		</tr>
 	</tbody>
 </table>
