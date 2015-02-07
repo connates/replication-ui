@@ -19,42 +19,15 @@ angular.module('storageApp', ['ngResource', 'ngRoute', 'mainNavList', "ui.router
                 templateUrl: "data-replication/data-replication.running.html",
                 controller: 'DataReplicationRunningCtrl'
             })
-            .state('data-replication.congigure', {
+            .state('data-replication.configure', {
                 url: "/configure",
-                templateUrl: "route1.list.html",
-                controller: function ($scope) {
-                    $scope.items = ["A", "List", "Of", "Items"];
-                }
+                templateUrl: "data-replication/data-replication.configure.html",
+                controller: 'DataReplicationConfigCtrl'
             })
             .state('data-migration', {
                 url: "/data-migration",
                 controller: 'DataMigrationCtrl',
                 templateUrl: "data-migration/data-migration.html"
             })
-            .state('route2.list', {
-                url: "/list",
-                templateUrl: "route2.list.html",
-                controller: function ($scope) {
-                    $scope.things = ["A", "Set", "Of", "Things"];
-                }
-            })
+            
     });
-
-
-
-
-
-
-/*   $routeProvider.when('/', {
-            templateUrl: 'data-replication/data-replication.html',
-            controller: 'DataReplicationCtrl'
-        }).when('/data-migration', {
-            templateUrl: 'data-migration/data-migration.html',
-            controller: 'DataMigrationCtrl'
-        }).when('/login', {
-            templateUrl: 'login/login.html',
-            controller: 'LoginController',
-        }).otherwise({
-            redirectTo: '/'
-        });
-    });*/
