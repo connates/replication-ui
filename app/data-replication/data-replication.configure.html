@@ -1,51 +1,51 @@
-<form class="form-horizontal" role="form" ng-click="submitForm()">
+<form class="form-horizontal" role="form">
     <div class="form-group col-sm-12">
         <label for="sourceIp" class="col-sm-2 control-label">Source IP</label>
         <div class="col-sm-2">
-            <input class="form-control" id="inputName3" placeholder="Source IP">
+            <input class="form-control" ng-model="sourceIp" placeholder="Source IP">
         </div>
         <label for="destinationIp" class="col-sm-2 control-label">Destination IP</label>
         <div class="col-sm-2">
-            <input class="form-control" id="destinationIp" placeholder="Destination IP">
+            <input class="form-control" ng-model="destinationIp" placeholder="Destination IP">
         </div>
     </div>
     <div class="form-group col-sm-12">
         <label for="sourceIp" class="col-sm-2 control-label">Source Disk</label>
         <div class="col-sm-2">
-            <input class="form-control" id="inputName3" placeholder="Source Disk">
+            <input class="form-control" ng-model="sourceDisk" placeholder="Source Disk">
         </div>
         <label for="destinationIp" class="col-sm-2 control-label">Destination Disk</label>
         <div class="col-sm-2">
-            <input class="form-control" id="destinationIp" placeholder="Destination Disk">
+            <input class="form-control" ng-model="destinationDisk" placeholder="Destination Disk">
         </div>
     </div>
-     <div class="form-group col-sm-12">
+    <div class="form-group col-sm-12">
         <label for="sourceIp" class="col-sm-2 control-label">Snapshot Policy</label>
         <div class="col-sm-2">
-            <input class="form-control" id="inputName3" placeholder="Snapshot Policy">
+            <input class="form-control" ng-model="snapshotPolicy" placeholder="Snapshot Policy">
         </div>
         <label for="destinationIp" class="col-sm-2 control-label">Validation Policy</label>
         <div class="col-sm-2">
-            <input class="form-control" id="destinationIp" placeholder="Validation Policy">
+            <input class="form-control" ng-model="validationPolicy" placeholder="Validation Policy">
         </div>
     </div>
     <div class="form-group col-sm-12">
         <label for="sourceIp" class="col-sm-2 control-label">Memory</label>
         <div class="col-sm-2">
-            <input class="form-control" id="inputName3" placeholder="Memory">
+            <input class="form-control" ng-model="memory" placeholder="Memory">
         </div>
         <label for="destinationIp" class="col-sm-2 control-label">Frequency</label>
         <div class="col-sm-2">
-            <input class="form-control" id="destinationIp" placeholder="Validation Policy">
+            <input class="form-control" ng-model="frequency" placeholder="Frequency">
         </div>
     </div>
     <div class="form-group col-sm-12">
         <label for="sourceIp" class="col-sm-2 control-label">B/W</label>
         <div class="col-sm-2">
-            <input class="form-control" id="inputName3" placeholder="Bandwidth">
+            <input class="form-control" ng-model="bandwidth" placeholder="Bandwidth">
         </div>
     </div>
-    
+
     <div class="form-group">
         <div class="col-sm-offset-2 col-sm-10">
             <button ng-click="submitForm()" class="btn btn-success">Submit</button>

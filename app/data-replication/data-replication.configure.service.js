@@ -3,7 +3,7 @@
 angular.module('storageApp')
     .factory('replicationService', ['$http', function ($http) {
 
-        var urlBase = 'http://localhost:3000/disk';
+        var urlBase = 'http://localhost:3000/replicaiton-config';
         var replicationService = {};
 
         replicationService.configReplication = function (disk) {
